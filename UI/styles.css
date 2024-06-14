@@ -1,0 +1,100 @@
+body {
+    background-color: #f0f0f0;
+}
+
+.card-wrapper {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.custom-circle-image {
+    width: 10vw;
+    height: 10vw;
+}
+
+.custom-circle-image img {
+    object-fit: cover;
+}
+
+.card-title {
+    letter-spacing: 1px;
+}
+
+.card-text {
+    font-family: MerriweatherRegular;
+    font-size: 22px;
+    line-height: initial;
+}
+
+.dropzone {
+    border-style: dashed;
+}
+
+.container {
+    padding-bottom: 10px;
+}
+
+.imgs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-wrapper {
+    width: 50vw;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.demo {
+    background-color: #333;
+    color: #fff;
+    font-size: 1.25rem;
+    padding: 10px;
+}
+
+.error {
+    font-family: MerriweatherRegular;
+    font-size: 30px;
+    line-height: initial;
+    color: blue;
+    text-align: center;
+}
+
+#classTable {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#classTable td,
+#classTable th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#classTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4caf50;
+    color: white;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 2px;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer a {
+    color: #fff;
+}

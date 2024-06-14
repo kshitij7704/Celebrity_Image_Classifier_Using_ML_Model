@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celebrity Image Classifier - By Kshitij Kashyap</title>
+    <!-- Page Logo Image -->
+    <link rel="shortcut icon" href="images/logo.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <!-- Dropzone CSS -->
+    <link rel="stylesheet" href="./dropzone.min.css">
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <nav class="demo">
+        <h1>Celebrity Image Classifier</h1>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+        <div class="imgs">
+            <div class="row">
+                
+                <!-- Lionel Messi Section -->
+                <div class="col card-wrapper" data-player="lionel_messi">
+                        <div class="card border-0">
+                            <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image" style="margin-top: 10px;">
+                                <img class="w-100 h-100" src="./images/messi.jpeg" alt="Card image cap">
+                            </div>
+                            <div class="card-body text-center mt-4">
+                                <h4 class="text-uppercase card-title" style="font-size: 1.35rem; font-weight: 500; letter-spacing: normal;">Lionel<br>Messi</h4>
+                                </p>
+                            </div>
+                        </div>
+                    </div>     
+                    
+                    <!-- Shah Rukh Khan Section -->
+                    <div class="col card-wrapper" data-player="shah_rukh">
+                            <div class="card border-0">
+                                <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image" style="margin-top: 10px;">
+                                    <img class="w-100 h-100" src="./images/srk.jpeg" alt="Card image cap">
+                                </div>
+                                <div class="card-body text-center mt-4">
+                                    <h4 class="text-uppercase card-title" style="font-size: 1.28rem; font-weight: 500; letter-spacing: normal;">Shah Rukh<br>Khan</h4>
+                                    </p>
+                                </div>
+                            </div>
+                    </div> 
+                    
+                    <!-- Saina Nehwal Section -->
+                    <div class="col card-wrapper" data-player="saina_nehwal">
+                            <div class="card border-0">
+                                <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image" style="margin-top: 10px;">
+                                    <img class="w-100 h-100" src="./images/saina.jpeg" alt="Card image cap">
+                                </div>
+                                <div class="card-body text-center mt-4">
+                                    <h4 class="text-uppercase card-title" style="font-size: 1.35rem; font-weight: 500; letter-spacing: normal;">Saina<br>Nehwal</h4>
+                                    </p>
+                                </div>
+                            </div>
+                    </div>          
+
+                    <!-- Tom Cruise Section -->
+                    <div class="col card-wrapper" data-player="tom_cruise">
+                        <div class="card border-0">
+                            <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image" style="margin-top: 10px;">
+                                <img class="w-100 h-100" src="./images/tom.jpeg" alt="Card image cap">
+                            </div>
+                            <div class="card-body text-center mt-4">
+                                <h4 class="text-uppercase card-title" style="font-size: 1.35rem; font-weight: 500; letter-spacing: normal;">Tom<br>Cruise</h4>
+                                </p>
+                            </div>
+                        </div>
+                    </div>      
+        
+                    <!-- Virat Kohli Section -->
+                    <div class="col card-wrapper" data-player="virat_kohli">
+                        <div class="card border-0">
+                            <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image" style="margin-top: 10px;">
+                                <img class="w-100 h-100" src="./images/virat.jpeg" alt="Card image cap">
+                            </div>
+                            <div class="card-body text-center mt-4">
+                                <h4 class="text-uppercase card-title" style="font-size: 1.35rem; font-weight: 500; letter-spacing: normal;">Virat<br>Kohli</h4>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+        </div>
+
+        <!-- Dropzone Section -->
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="row">
+                    <div class="col-12 mx-auto">
+                        <form action="/file-upload" class="dropzone" id="dropzone">
+                            <div class="dz-message needsclick">
+                                <img src="./images/upload.png" width="50vw" height="50vw"><br>
+                                <span class="note needsclick">Drop files here or click to upload</span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-3 mx-auto">
+                        <button id="submitBtn" type="button" class="btn btn-success">Classify</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Error message part -->
+            <div class="col-sm-8 error" id="error" >
+                <p style="font-family: sans-serif;">Cannot classify this image. Classifier was not able to detect face and two eyes properly</p>    
+            </div>
+
+            <!-- Result Display Part -->
+            <div class="col-sm-4" id="resultHolder">
+            </div>
+            <div class="col-sm-4" id="divClassTable">
+                <table id="classTable" style="background-color: #fff;">
+                        <tr>
+                            <th>Player</th>
+                            <th>Probability Score</th>
+                        </tr>
+                        <tr>
+                            <td>Lionel Messi</td>
+                            <td id="score_lionel_messi"></td>
+                        </tr>
+                        <tr>
+                            <td>Shah Rukh Khan</td>
+                            <td id="score_shah_rukh"></td>
+                        </tr>
+                        <tr>
+                            <td>Saina Nehwal</td>
+                            <td id="score_saina_nehwal"></td>
+                        </tr>
+                        <tr>
+                            <td>Tom Cruise</td>
+                            <td id="score_tom_cruise"></td>
+                        </tr>
+                        <tr>
+                            <td>Virat Kohli</td>
+                            <td id="score_virat_kohli"></td>
+                        </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Made by Kshitij Kashyap - <a href="https://kshitij7704.github.io/Kshitij_Portfolio/" target="_blank" style="color: #007ced;">Click to know more</a></p>
+    </footer>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="./dropzone.min.js"></script>
+<script src="./script.js"></script>
+</html>
