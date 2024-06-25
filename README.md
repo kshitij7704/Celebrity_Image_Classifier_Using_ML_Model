@@ -28,3 +28,42 @@ Simple HTML, CSS, and JavaScript were used to create a user-friendly UI. The Jav
 
 ### 7. Usage
 A predefined dropbox is used for easy image upload. Once the response is received, it is displayed to the user in a tabular format along with the probability of each celebrity. The UI also handles cases where the image is not clearly visible or if the eyes are not clearly visible, providing appropriate messages to the user.
+
+## Technologies Used
+1. <b>HTML</b>: Markup language for creating the structure of the web application.
+2. <b>CSS</b>: Stylesheet language for designing the web application.
+3. <b>JavaScript</b>: Programming language for adding interactive functionality to the UI.
+4. <b>Python</b>: Programming language for developing the ML model and server-side logic.
+5. <b>Flask</b>: Micro web framework for handling server-side operations.
+6. <b>OpenCV</b>: Library for image processing tasks.
+7. <b>scikit-learn</b>: Machine learning library for model creation and training.
+8. <b>Wavelet Transformation</b>: Technique used for image processing.
+
+## Folder and File Structure
+1. <b>Model/</b>: Contains model creation file along with the dataset, cropped dataset and opencv files.
+2. <b>Server/</b>: Contains the Flask server files along with wavelet file and opencv files.
+3. <b>UI/</b>: Contains the UI code for the webpage in the form of simple HTML, CSS and JavaScript.
+
+## Setup Instructions
+To run the Celebrity Image Classifier locally, follow these steps:
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/Celebrity_Image_Classifier_Using_ML_Model.git
+```
+2. Navigate to the project directory:
+```bash
+cd Celebrity_Image_Classifier_Using_ML_Model
+```
+3. Install the required dependencies:
+```bash
+cd Model
+pip install -r requirements.txt
+```
+4. Run the Flask server:
+```bash
+python Server/server.py
+```
+5. Open your web browser and navigate to http://localhost:5000/classify_image to access the application.
+
+## Contributing
+Contributions are welcome! If you have any suggestions or improvements, feel free to open an issue or submit a pull request. Please ensure to follow the code of conduct and contribute to maintaining a positive and collaborative environment.
