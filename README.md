@@ -48,7 +48,7 @@ A predefined dropbox is used for easy image upload. Once the response is receive
 To run the Celebrity Image Classifier locally, follow these steps:
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/Celebrity_Image_Classifier_Using_ML_Model.git
+git clone https://github.com/kshitij7704/Celebrity_Image_Classifier_Using_ML_Model.git
 ```
 2. Navigate to the project directory:
 ```bash
